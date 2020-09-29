@@ -1,0 +1,293 @@
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: hsl(0, 0%, 100%);
+  margin: 3%  10%;
+  color: hsl(228, 12%, 44%);
+}
+
+body.dark{
+  background-color: hsl(230, 17%, 14%);
+  color: hsl(228, 34%, 66%);
+}
+
+h1{
+  color: hsl(230, 17%, 14%);
+  margin: 0;
+}
+
+.dark h1{
+  color: hsl(0, 0%, 100%);
+}
+
+p{
+  margin: 0;
+}
+
+.grey-bg{
+  background-color: hsl(225, 100%, 98%);
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.dark .grey-bg{
+  background-color: hsl(232, 19%, 15%);
+}
+.top-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.switcher-text{
+  font-weight: 700;
+}
+
+.dark .switcher-text{
+  color: hsl(0, 0%, 100%);
+}
+
+.switcher-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-box{
+  font-weight: 700;
+}
+
+.main-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+/* Big box design */
+
+.sub-box{
+  background-color: hsl(227, 47%, 96%);
+  text-align: center;
+  width: 19%;
+  border-radius: 7px;
+  padding: 2%;
+}
+
+.dark .sub-box{
+  background-color: hsl(228, 28%, 20%);
+}
+
+.sub-box:hover{
+  background-color: hsl(227, 47%, 90%);
+}
+
+.dark .sub-box:hover{
+  background-color: hsl(228, 28%, 30%);
+}
+
+
+.sub-box .name{
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.sub-box .name-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 15px;
+}
+
+.sub-box .number{
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.sub-box .followers{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.sub-box .new-followers{
+  font-size: 12px;
+  color: #1EB589;
+  margin-bottom: 0;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.sub-box.facebook{
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+.sub-box.twitter{
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+.sub-box.insta{
+  border-top: 5px solid;
+  border-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.sub-box.youtube{
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+/* Small box design */
+
+.overview-title{
+  margin-top: 50px;
+}
+
+.dark .overview-title{
+  color: hsl(0, 0%, 100%);
+}
+
+.box-small{
+  margin-bottom: 30px;
+}
+
+.action-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-box.bottom{
+  margin-bottom: 20px;
+}
+
+.page-views{
+  margin: 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.number-new{
+  font-size: 30px;
+  font-weight: 700;
+  color: hsl(230, 17%, 14%);
+  margin-bottom: 0;
+}
+
+.dark .number-new{
+  color: hsl(0, 0%, 100%);
+}
+
+.procent{
+  margin-bottom: 0;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.procent.down{
+  color: #DC414C;
+}
+
+.procent.up{
+  color: #1EB589;
+}
+
+.overview-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Switcher */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(230, 22%, 74%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 30px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.dark .slider:before{
+  background-color: hsl(228, 28%, 30%);
+}
+
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(230, 22%, 74%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+}
+
+@media only screen and (max-width: 900px){
+  .top-box{
+    flex-direction: column;
+  }
+
+  .switcher-box{
+
+  }
+
+  .main-box{
+    flex-direction: column;
+  }
+
+  .sub-box{
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 5%;
+  }
+  .switcher-box{
+    justify-content: space-between;
+    border-top: 0.2px solid hsl(230, 22%, 74%);
+    margin-top: 30px;
+    padding-top: 10px;
+  }
+
+  .dark .switcher-box{
+    border-top: 0.2px solid hsl(228, 28%, 30%);
+  }
+
+}
