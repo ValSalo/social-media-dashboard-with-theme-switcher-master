@@ -71,8 +71,9 @@ p{
   background-color: hsl(227, 47%, 96%);
   text-align: center;
   width: 19%;
-  border-radius: 7px;
+  border-radius: 0 0 7px 7px;
   padding: 2%;
+  position: relative;
 }
 
 .dark .sub-box{
@@ -132,8 +133,10 @@ p{
 }
 
 .sub-box.insta{
-  border-top: 5px solid;
-  border-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border-top: solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
 
 .sub-box.youtube{
@@ -152,6 +155,7 @@ p{
 
 .box-small{
   margin-bottom: 30px;
+  border-radius: 7px;
 }
 
 .action-box{
